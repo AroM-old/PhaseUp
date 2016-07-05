@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.phaseup">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BlueBookActivity"
+            android:label="@string/blue_book" />
+        <activity
+            android:name=".AviationSongActivity"
+            android:label="@string/aviation_songs" />
+        <activity
+            android:name=".SoldierCreedActivity"
+            android:label="@string/soldier_creed" />
+        <activity
+            android:name=".RoomInspectionActivity"
+            android:label="@string/room_inspection" />
+        <activity
+            android:name=".WallLockerActivity"
+            android:label="@string/wall_locker_inspection" />
+        <activity
+            android:name=".ASUActivity"
+            android:label="@string/asu_inspection" />
+    </application>
+
+</manifest>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.phaseup.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/blue_book"
+            style="@style/TextView_Buttons"
+            android:background="#004D40"
+            android:text="@string/blue_book" />
+
+        <TextView
+            android:id="@+id/aviation_songs"
+            style="@style/TextView_Buttons"
+            android:background="#00695C"
+            android:text="@string/aviation_songs" />
+
+        <TextView
+            android:id="@+id/soldier_creed"
+            style="@style/TextView_Buttons"
+            android:background="#004D40"
+            android:text="@string/soldier_creed" />
+
+        <TextView
+            android:id="@+id/room_inspection"
+            style="@style/TextView_Buttons"
+            android:background="#00695C"
+            android:text="@string/room_inspection" />
+
+        <TextView
+            android:id="@+id/wall_Locker_inspection"
+            style="@style/TextView_Buttons"
+            android:background="#004D40"
+            android:text="@string/wall_locker_inspection" />
+
+        <TextView
+            android:id="@+id/asu_inspection"
+            style="@style/TextView_Buttons"
+            android:background="#00695C"
+            android:text="@string/asu_inspection" />
+
+        <TextView
+            android:id="@+id/send_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="@string/feedback"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+</ScrollView>
