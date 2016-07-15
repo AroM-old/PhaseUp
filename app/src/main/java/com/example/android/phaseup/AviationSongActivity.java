@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class AviationSongActivity extends AppCompatActivity {
 
+    //Media Player variable.
     MediaPlayer mMediaPlayer;
 
     @Override
@@ -16,8 +17,11 @@ public class AviationSongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aviation_song);
 
+        //Create and Upload the MP3 file.
         mMediaPlayer = MediaPlayer.create(this, R.raw.aviationsong);
 
+
+        //The aviation song text show in the screen.
         TextView textViewAviation = (TextView) findViewById(R.id.textview_aviation);
         textViewAviation.setText("High above the best, high above the best \n\n" +
                 "We are Army Aviation USA, \n\n" +
@@ -28,6 +32,7 @@ public class AviationSongActivity extends AppCompatActivity {
                 "As we aid the Nation's quest \n\n" +
                 "Army Aviation, flying high above the best!");
 
+        //Listener to play sound when user touched.
         Button playButton = (Button) findViewById(R.id.play_sound);
 
         playButton.setOnClickListener(new View.OnClickListener() {

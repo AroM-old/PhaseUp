@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        //Feedback button.
         TextView sendFeedBack = (TextView) findViewById(R.id.send_feedback);
         sendFeedBack.setOnClickListener(new View.OnClickListener() {
             @Override

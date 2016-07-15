@@ -14,7 +14,7 @@ public class BlueBookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blue_book);
 
-
+        //Array list with questions & Answers about the bluebook test.
         ArrayList<BlueBookQuestions> blueBookList = new ArrayList<>();
         blueBookList.add(new BlueBookQuestions("What is the purpose of the Honor Code at the 128th Aviation Brigade?", "The purpose is to instill " +
                 "an enviroment where academic, personel, and professional achievement flourish while maintaining academic integrity."));
@@ -47,7 +47,7 @@ public class BlueBookActivity extends AppCompatActivity {
         blueBookList.add(new BlueBookQuestions("What are three prohited items to keep with you or inside the rooms?", "Drugs, Food, Pornography."));
         blueBookList.add(new BlueBookQuestions("Write the 9 steps to clear a weapon?", "-Refer to your Blue Book-"));
 
-
+        //Adapter to show question on a list view.
         BlueBookAdapter blueBookQuestionsAdapter = new BlueBookAdapter(this, blueBookList);
         ListView listView = (ListView) findViewById(R.id.activity_blue_book);
         listView.setAdapter(blueBookQuestionsAdapter);

@@ -11,6 +11,8 @@ public class SoldierCreedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_soldier_creed);
 
+
+        //Show Soldier's Creed text on screen.
         TextView textViewCreed = (TextView)findViewById(R.id.textview_creed);
         textViewCreed.setText("The Soldier's Creed\n\n"+
                 "I am an American Soldier. \n" + "I am a Warrior and a member of a team. \n" +

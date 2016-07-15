@@ -28,22 +28,22 @@ public class BlueBookAdapter extends ArrayAdapter<BlueBookQuestions> {
                     R.layout.list_item, parent, false);
         }
 
-        // Get the {@link AndroidFlavor} object located at this position in the list
+        // Get the {@link BlueBookQuestions} object located at this position in the list
         BlueBookQuestions currentBlueBook = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.question);
-        // Get the version name from the current AndroidFlavor object and
+        // Get the version name from the current BlueBookQuestions object and
         // set this text on the name TextView
         nameTextView.setText(currentBlueBook.getBlueBookQueston());
 
         // Find the TextView in the list_item.xml layout with the ID version_number
         TextView numberTextView = (TextView) listItemView.findViewById(R.id.answer);
-        // Get the version number from the current AndroidFlavor object and
+        // Get the version number from the current BlueBookQuestions object and
         // set this text on the number TextView
         numberTextView.setText(currentBlueBook.getBlueBookAnswer());
 
-        // Return the whole list item layout (containing 2 TextViews and an ImageView)
+        // Return the whole list item layout
         // so that it can be shown in the ListView
         return listItemView;
 

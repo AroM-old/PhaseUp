@@ -1,8 +1,7 @@
 package com.example.android.phaseup;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.support.v7.app.AppCompatActivity;
 
 public class ASUActivity extends AppCompatActivity {
 
