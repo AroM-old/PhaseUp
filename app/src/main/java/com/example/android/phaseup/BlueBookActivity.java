@@ -8,12 +8,14 @@ import java.util.ArrayList;
 
 public class BlueBookActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blue_book);
 
-        ArrayList<BlueBookQuestions> blueBookList = new ArrayList<BlueBookQuestions>();
+
+        ArrayList<BlueBookQuestions> blueBookList = new ArrayList<>();
         blueBookList.add(new BlueBookQuestions("What is the purpose of the Honor Code at the 128th Aviation Brigade?", "The purpose is to instill " +
                 "an enviroment where academic, personel, and professional achievement flourish while maintaining academic integrity."));
         blueBookList.add(new BlueBookQuestions("Write 3 violations to the Honor Code?", "Cheating, plagiarism, innapropiate personal or professional behavior."));
@@ -49,5 +51,6 @@ public class BlueBookActivity extends AppCompatActivity {
         BlueBookAdapter blueBookQuestionsAdapter = new BlueBookAdapter(this, blueBookList);
         ListView listView = (ListView) findViewById(R.id.activity_blue_book);
         listView.setAdapter(blueBookQuestionsAdapter);
+
     }
 }

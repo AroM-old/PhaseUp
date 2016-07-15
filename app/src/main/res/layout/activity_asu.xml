@@ -11,21 +11,13 @@
         android:orientation="vertical"
         tools:context="com.example.android.phaseup.AviationSongActivity">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:background="@color/colorPrimaryDark">
-            
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/textview_aviation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:gravity="center"
-            android:text="@string/coming_soon"
-            android:textSize="48sp" />
+        <ImageView
+            android:id="@+id/asu_image"
+            android:layout_width="wrap_content"
+            android:layout_height="550dp"
+            android:src="@drawable/asu_image"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"/>
 
     </LinearLayout>
 </ScrollView>
