@@ -12,14 +12,16 @@ public class AviationSongActivity extends AppCompatActivity {
     //Media Player variable.
     MediaPlayer mMediaPlayer;
 
+    private boolean isPlaying = false;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aviation_song);
 
         //Create and Upload the MP3 file.
-        mMediaPlayer = MediaPlayer.create(this, R.raw.aviationsong);
-
+        mMediaPlayer = MediaPlayer.create(this, R.raw.armyaviation);
 
         //The aviation song text show in the screen.
         TextView textViewAviation = (TextView) findViewById(R.id.textview_aviation);
@@ -33,14 +35,23 @@ public class AviationSongActivity extends AppCompatActivity {
                 "Army Aviation, flying high above the best!");
 
         //Listener to play sound when user touched.
-        Button playButton = (Button) findViewById(R.id.play_sound);
+        final Button playButton = (Button) findViewById(R.id.play_sound);
+        playButton.setText("Play");
 
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            mMediaPlayer.start();
+                if (!isPlaying){
+                    mMediaPlayer.start();
+                    playButton.setText("Stop");
+                }else {
+                    mMediaPlayer.stop();
+                    playButton.setText("Play");
+                    isPlaying = false;
+                }
 
             }
+
         });
     }
 }

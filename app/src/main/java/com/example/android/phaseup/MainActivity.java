@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         //Call BlueBook Activity
         TextView blueBook = (TextView) findViewById(R.id.blue_book);
 
