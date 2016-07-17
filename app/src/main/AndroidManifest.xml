@@ -17,22 +17,48 @@
         </activity>
         <activity
             android:name=".BlueBookActivity"
-            android:label="@string/blue_book" />
+            android:label="@string/blue_book">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
         <activity
             android:name=".AviationSongActivity"
-            android:label="@string/aviation_songs" />
+            android:label="@string/aviation_songs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.phaseup.MainActivity" />
+        </activity>
+
         <activity
             android:name=".SoldierCreedActivity"
-            android:label="@string/soldier_creed" />
+            android:label="@string/soldier_creed">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.phaseup.MainActivity" />
+        </activity>
         <activity
             android:name=".RoomInspectionActivity"
-            android:label="@string/room_inspection" />
+            android:label="@string/room_inspection">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.phaseup.MainActivity" />
+        </activity>
         <activity
             android:name=".WallLockerActivity"
-            android:label="@string/wall_locker_inspection" />
+            android:label="@string/wall_locker_inspection">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.phaseup.MainActivity" />
+        </activity>
         <activity
             android:name=".ASUActivity"
-            android:label="@string/asu_inspection" />
+            android:label="@string/asu_inspection">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.phaseup.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
