@@ -12,9 +12,6 @@ public class AviationSongActivity extends AppCompatActivity {
     //Media Player variable.
     MediaPlayer mMediaPlayer;
 
-    private boolean isPlaying = false;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,13 +38,12 @@ public class AviationSongActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!isPlaying){
-                    mMediaPlayer.start();
-                    playButton.setText("Stop");
+                if (mMediaPlayer.isPlaying()){
+                    mMediaPlayer.pause();
+                    playButton.setText("Pause");
                 }else {
-                    mMediaPlayer.stop();
+                    mMediaPlayer.start();
                     playButton.setText("Play");
-                    isPlaying = false;
                 }
 
             }

@@ -1,20 +1,28 @@
 package com.example.android.phaseup;
 
-import android.support.v7.app.AppCompatActivity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class SoldierCreedActivity extends AppCompatActivity {
+
+    //Media Player variable.
+    MediaPlayer mMediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_soldier_creed);
 
+        //Create and Upload the MP3 file.
+        mMediaPlayer = MediaPlayer.create(this, R.raw.soldierscreed);
 
         //Show Soldier's Creed text on screen.
-        TextView textViewCreed = (TextView)findViewById(R.id.textview_creed);
-        textViewCreed.setText("The Soldier's Creed\n\n"+
+        TextView textViewCreed = (TextView) findViewById(R.id.textview_creed);
+        textViewCreed.setText("The Soldier's Creed\n\n" +
                 "I am an American Soldier. \n" + "I am a Warrior and a member of a team. \n" +
                 "I serve to the people of the United States and live the Army Values. \n\n" +
                 "I will always place the mission first. \n" + "I will never accept defeat. \n" + "I will never quit. \n" +
@@ -23,6 +31,30 @@ public class SoldierCreedActivity extends AppCompatActivity {
                 "I am an expert and I am a professional. \n\n" + "I stand ready to deploy, engage, and destroy the enemies of the United States of America in close combat. \n" +
                 "I am a guardian of freedom and the American way of life. \n\n" +
                 "I am an American Soldier.");
-    }
 
+        //Listener to play sound when user touched.
+        final Button playButton = (Button) findViewById(R.id.play_creed);
+        playButton.setText("Play");
+
+        playButton.setOnClickListener(new View.OnClickListener()
+
+              {
+                  @Override
+                  public void onClick(View v) {
+                      if (mMediaPlayer.isPlaying()) {
+                          mMediaPlayer.pause();
+                          playButton.setText("Pause");
+                      } else {
+                          mMediaPlayer.start();
+                          playButton.setText("Play");
+                      }
+
+                  }
+
+              }
+
+        );
+    }
 }
+
+
