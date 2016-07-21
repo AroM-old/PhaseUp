@@ -17,9 +17,6 @@ public class SoldierCreedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_soldier_creed);
 
-        //Create and Upload the MP3 file.
-        mMediaPlayer = MediaPlayer.create(this, R.raw.soldierscreed);
-
         //Show Soldier's Creed text on screen.
         TextView textViewCreed = (TextView) findViewById(R.id.textview_creed);
         textViewCreed.setText("The Soldier's Creed\n\n" +
@@ -36,24 +33,42 @@ public class SoldierCreedActivity extends AppCompatActivity {
         final Button playButton = (Button) findViewById(R.id.play_creed);
         playButton.setText("Play");
 
-        playButton.setOnClickListener(new View.OnClickListener()
+        playButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mMediaPlayer == null) {
+                    mMediaPlayer = MediaPlayer.create(SoldierCreedActivity.this, R.raw.soldierscreed);
+                    mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        public void onCompletion(MediaPlayer mp) {
+                            stopMediaPlayer();
+                            playButton.setText("Play");
+                        }
+                    });
+                }
 
-              {
-                  @Override
-                  public void onClick(View v) {
-                      if (mMediaPlayer.isPlaying()) {
-                          mMediaPlayer.pause();
-                          playButton.setText("Pause");
-                      } else {
-                          mMediaPlayer.start();
-                          playButton.setText("Play");
-                      }
+                if (playButton.getText().equals("Play")) {
+                    playButton.setText("Pause");
+                    mMediaPlayer.start();
+                } else if (playButton.getText().equals("Pause")) {
+                    playButton.setText("Play");
+                    mMediaPlayer.pause();
+                }
+            }
+        });
 
-                  }
+    }
 
-              }
+    @Override
+    protected void onDestroy() {
+        stopMediaPlayer();
+        super.onDestroy();
+    }
 
-        );
+    public void stopMediaPlayer() {
+        if (mMediaPlayer != null) {
+            mMediaPlayer.release();
+            mMediaPlayer = null;
+        }
     }
 }
 

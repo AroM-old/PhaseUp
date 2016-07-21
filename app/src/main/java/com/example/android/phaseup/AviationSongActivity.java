@@ -17,9 +17,6 @@ public class AviationSongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aviation_song);
 
-        //Create and Upload the MP3 file.
-        mMediaPlayer = MediaPlayer.create(this, R.raw.armyaviation);
-
         //The aviation song text show in the screen.
         TextView textViewAviation = (TextView) findViewById(R.id.textview_aviation);
         textViewAviation.setText("High above the best, high above the best \n\n" +
@@ -38,16 +35,37 @@ public class AviationSongActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mMediaPlayer.isPlaying()){
-                    mMediaPlayer.pause();
-                    playButton.setText("Pause");
-                }else {
-                    mMediaPlayer.start();
-                    playButton.setText("Play");
+                if (mMediaPlayer == null) {
+                    mMediaPlayer = MediaPlayer.create(AviationSongActivity.this, R.raw.armyaviation);
+                    mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        public void onCompletion(MediaPlayer mp) {
+                            stopMediaPlayer();
+                            playButton.setText("Play");
+                        }
+                    });
                 }
 
+                if (playButton.getText().equals("Play")) {
+                    playButton.setText("Pause");
+                    mMediaPlayer.start();
+                } else if (playButton.getText().equals("Pause")) {
+                    playButton.setText("Play");
+                    mMediaPlayer.pause();
+                }
             }
-
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        stopMediaPlayer();
+        super.onDestroy();
+    }
+
+    public void stopMediaPlayer() {
+        if (mMediaPlayer != null) {
+            mMediaPlayer.release();
+            mMediaPlayer = null;
+        }
     }
 }
