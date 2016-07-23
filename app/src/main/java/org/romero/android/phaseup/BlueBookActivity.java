@@ -1,4 +1,4 @@
-package com.example.android.phaseup;
+package org.romero.android.phaseup;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +25,7 @@ public class BlueBookActivity extends AppCompatActivity {
         blueBookList.add(new BlueBookQuestions("What recognition was awarded to the 222d for its service in Vietnam war?", "The Meritorious Unit Commendation."));
         blueBookList.add(new BlueBookQuestions("What is the motto of the 128th Aviation Brigade?", "Born Under Fire."));
         blueBookList.add(new BlueBookQuestions("What is the purpose of the Blue Book?", "The purpose is to inform Soldiers of the Aviation Warfighting Center and Fort Eustis " +
-                "about basic standards for individual discipline, appereance, conduct, and military courtesy as established by both Army and Fort Eustis regulations."));
+                "about basic standards for individual discipline, appearance, conduct, and military courtesy as established by both Army and Fort Eustis regulations."));
         blueBookList.add(new BlueBookQuestions("Where do you store the headgear when it is not worn?", "In the ACU cargo pockets."));
         blueBookList.add(new BlueBookQuestions("How the personnel must wear the patrol cap?", "Straight in the head so that the cap band creates a straight line around " +
                 "the head, parallel to the ground."));
@@ -33,7 +33,7 @@ public class BlueBookActivity extends AppCompatActivity {
         blueBookList.add(new BlueBookQuestions("True or False that the sideburns will not extend below the buttom of the hear opening?", "True."));
         blueBookList.add(new BlueBookQuestions("Where is worn the organizational patches?", "Organizational patches are centered on the hook and loop-faced pad already provided " +
                 "on the left sleeve of the ACU coat."));
-        blueBookList.add(new BlueBookQuestions("Mention two unanthorize male hair style?", "Mohawk or Horseshoe"));
+        blueBookList.add(new BlueBookQuestions("Mention two unauthorized male hair style?", "Mohawk or Horseshoe"));
         blueBookList.add(new BlueBookQuestions("How long must be the female bun when extended?", "Maximum of 3 inch from the scalp."));
         blueBookList.add(new BlueBookQuestions("Is the tongue splitting authorize?", "Not."));
         blueBookList.add(new BlueBookQuestions("Write two facilities that are authorize to use IAW their phase privileges?", "Library and PX."));
@@ -46,6 +46,7 @@ public class BlueBookActivity extends AppCompatActivity {
         blueBookList.add(new BlueBookQuestions("Walk and talk/text with the cellphone while in uniform is authorized?", "Not, Is not authorized."));
         blueBookList.add(new BlueBookQuestions("What are three prohited items to keep with you or inside the rooms?", "Drugs, Food, Pornography."));
         blueBookList.add(new BlueBookQuestions("Write the 9 steps to clear a weapon?", "-Refer to your Blue Book-"));
+        blueBookList.add(new BlueBookQuestions("Write the CQ phone number of your company?", "-Memorize and save it in your phone-"));
 
         //Adapter to show question on a list view.
         BlueBookAdapter blueBookQuestionsAdapter = new BlueBookAdapter(this, blueBookList);

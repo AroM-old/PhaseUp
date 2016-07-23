@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.phaseup">
+    package="org.romero.android.phaseup">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity">
+            android:name="org.romero.android.phaseup.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,49 +17,49 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BlueBookActivity"
+            android:name="org.romero.android.phaseup.BlueBookActivity"
             android:label="@string/blue_book">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="org.romero.android.phaseup.MainActivity" />
         </activity>
         <activity
-            android:name=".AviationSongActivity"
+            android:name="org.romero.android.phaseup.AviationSongActivity"
             android:label="@string/aviation_songs"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="org.romero.android.phaseup.MainActivity" />
         </activity>
         <activity
-            android:name=".SoldierCreedActivity"
+            android:name="org.romero.android.phaseup.SoldierCreedActivity"
             android:label="@string/soldier_creed"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="org.romero.android.phaseup.MainActivity" />
         </activity>
         <activity
-            android:name=".RoomInspectionActivity"
+            android:name="org.romero.android.phaseup.RoomInspectionActivity"
             android:label="@string/room_inspection">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="org.romero.android.phaseup.MainActivity" />
         </activity>
         <activity
-            android:name=".WallLockerActivity"
+            android:name="org.romero.android.phaseup.WallLockerActivity"
             android:label="@string/wall_locker_inspection">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="org.romero.android.phaseup.MainActivity" />
         </activity>
         <activity
-            android:name=".ASUActivity"
+            android:name="org.romero.android.phaseup.ASUActivity"
             android:label="@string/asu_inspection"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="org.romero.android.phaseup.MainActivity" />
         </activity>
     </application>
 

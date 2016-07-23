@@ -1,4 +1,4 @@
-package com.example.android.phaseup;
+package org.romero.android.phaseup;
 
 import android.graphics.Matrix;
 import android.os.Bundle;

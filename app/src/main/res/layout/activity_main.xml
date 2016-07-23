@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.android.phaseup.MainActivity">
+    tools:context="com.romero.android.phaseup.org.romero.android.phaseup.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.example.android.phaseup;
+package org.romero.android.phaseup;
 
 import android.app.Activity;
 import android.view.LayoutInflater;

@@ -1,4 +1,4 @@
-package com.example.android.phaseup;
+package org.romero.android.phaseup;
 
 /**
  * Created by algenisromero on 7/3/16.

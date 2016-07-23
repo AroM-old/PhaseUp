@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.example.android.phaseup.AviationSongActivity">
+        tools:context="com.romero.android.phaseup.org.romero.android.phaseup.AviationSongActivity">
 
         <RelativeLayout
             android:layout_width="match_parent"

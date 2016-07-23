@@ -1,4 +1,4 @@
-package com.example.android.phaseup;
+package org.romero.android.phaseup;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
