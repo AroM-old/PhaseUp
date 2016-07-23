@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Phase Up</string>
-    <string name="tittle">Phase UP</string>
+    <string name="app_name">Gators - Phase Up</string>
+    <string name="tittle">Gators - Phase UP</string>
     <string name="blue_book">Blue Book</string>
     <string name="aviation_songs">Aviation Song</string>
     <string name="soldier_creed">The Soldier\'s Creed</string>
@@ -8,7 +8,5 @@
     <string name="wall_locker_inspection">Wall Locker Inspection</string>
     <string name="asu_inspection">ASU Inspection</string>
     <string name="feedback">Send me a feedback!</string>
-    <string name="coming_soon">For better instruction about how to keep you room / locker and others
-    ready to inspection, please refer to your Barracks SOP, usually they are similar in most units but
-    not the same.</string>
+    <string name="coming_soon">Please refer to your barracks SOP.</string>
 </resources>

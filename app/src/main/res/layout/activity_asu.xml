@@ -13,11 +13,12 @@
 
         <ImageView
             android:id="@+id/asu_image"
-            android:layout_width="wrap_content"
+            android:layout_width="550dp"
             android:layout_height="550dp"
             android:src="@drawable/asu_image"
+            android:maxHeight="100dp"
+            android:maxWidth="50dp"
             android:layout_gravity="center"
-            android:scaleType="fitXY"/>
-
+            android:scaleType="fitCenter"/>
     </LinearLayout>
 </ScrollView>
